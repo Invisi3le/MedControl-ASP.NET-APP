@@ -1,0 +1,28 @@
+﻿@page
+@model MedControl.Pages.Appointment.AppointmentFinalViewModel
+@{
+}
+
+<h2 class="text-center mb-4">Appointment Details</h2>
+
+<div class="card mx-auto mb-4" style="max-width: 500px;">
+    <div class="card-header bg-secondary text-light">
+        <h5 class="card-title mb-0">Doctor Name:</h5>
+        <p class="card-text lead mb-0">@Model.DoctorName</p>
+    </div>
+    <div class="card-body">
+        <h5 class="card-title mb-3">Date:</h5>
+        <p class="card-text">@Model.Data</p>
+        <h5 class="card-title mb-3">Specialization:</h5>
+        <p class="card-text">@Model.Specialization</p>
+        <h5 class="card-title mb-3">Prescription:</h5>
+        <p class="card-text">@Model.Prescription</p>
+        <h5 class="card-title mb-3">Description:</h5>
+        <p class="card-text">@Model.Description</p>
+    </div>
+</div>
+
+<div class="mx-auto mb-4" style="max-width: 500px;">
+    <a asp-page="/Appointment/AppointmentsList" class="btn btn-primary" style="margin-right: auto">Zobacz swoje wizyty</a>
+    <a asp-page="/Index" class="btn btn-secondary">Wróć do menu głównego</a>
+</div>

@@ -1,0 +1,40 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    .card-equal-height {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+</style>
+
+<div class="jumbotron">
+    <h1 class="display-4">Witaj!</h1>
+    <h3>Zadbajmy wspólnie o Twoje zdrowie!</h3>
+    <hr class="my-4">
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card mb-3 card-equal-height">
+            <div class="card-body">
+                <h5 class="card-title">Dodaj wizytę</h5>
+                <p class="card-text">Zapisz informacje o odbytej wizycie lekarskiej.</p>
+                <a class="btn btn-primary" asp-area="" asp-page="Appointment/AddAppointment">Przejdź</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card mb-3 card-equal-height">
+            <div class="card-body">
+                <h5 class="card-title">Zobacz swoje wizyty</h5>
+                <p class="card-text">Kontroluj swoje wyniki na podstawie zapisanych wcześniej wizyt. Od teraz nie musisz pamiętać o wszystkich badaniach - zrobimy to za Ciebie!</p>
+                <a class="btn btn-primary" asp-area="" asp-page="Appointment/AppointmentsList">Przejdź</a>
+            </div>
+        </div>
+    </div>
+</div>
