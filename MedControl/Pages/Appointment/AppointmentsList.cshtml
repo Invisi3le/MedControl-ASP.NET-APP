@@ -1,5 +1,55 @@
 ﻿@page
 @model MedControl.Pages.Appointment.AppointmentsListModel
-@{
-}
+
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Twoje wizyty</h2>
+        </div>
+        <div class="col-6">
+            <a asp-page="AddAppointment" class=" btn btn-primary">
+                Stwórz nową wizytę
+            </a>
+
+        </div>
+    </div>
+    <br /> <br />
+    <table class="table table-bordered table-striped" style="width:100%">
+        <thead>
+            <tr>
+                <th>
+                    Lekarz
+                </th>
+                <th>
+                    Data
+                </th>
+                <th>
+                    Specjalizacja
+                </th>
+                <th>
+                    Recepta
+                </th>
+                <th>
+                    Przebieg wizyty
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var obj in Model.Appointments)
+            {
+                <tr>
+                    <td>@obj.DoctorName</td>
+                    <td>@obj.Data</td>
+                    <td>@obj.Specialization</td>
+                    <td>@obj.Prescription</td>
+                    <td>@obj.Description</td>
+                </tr>
+                
+            }
+           
+        </tbody>
+    </table>
+
+</div>
 

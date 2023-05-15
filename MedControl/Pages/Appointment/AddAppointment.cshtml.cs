@@ -1,22 +1,31 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using MedControl.Models;
+using MedControl.Data;
 
 namespace MedControl.Pages.Appointment
 {
-    public class IndexModel : PageModel
+    public class AddAppintmentModel : PageModel
     {
-        [BindProperty]
+       private readonly ApplicationDbContext _db;
         public AppointmentModel Appointment { get; set; }
 
+        public AddAppintmentModel(ApplicationDbContext db)
+        {
+            _db = db;
+            
+        }
 
         public void OnGet()
         {
         }
-
-        public IActionResult OnPost() { 
-            return RedirectToPage("AppointmentFinalView", new { Appointment.DoctorName, Appointment.Data, Appointment.Specialization, Appointment.Prescription, Appointment.Description
-            }); //TU MOZE BYC B£¥D
+            
+        public async Task <IActionResult> OnPost(AppointmentModel appointment) { 
+            
+            await _db.Appointments.AddAsync(appointment);
+            await _db.SaveChangesAsync();
+            return RedirectToPage("AppointmentsList");
+            
         }
     }
 }
