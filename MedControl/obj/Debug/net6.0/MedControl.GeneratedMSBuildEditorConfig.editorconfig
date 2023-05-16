@@ -28,6 +28,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwb2ludG1lbnRcQXBwb2ludG1lbnRzTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Projekty/.NET/MedControl/MedControl/Pages/Appointment/DeleteAppointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwb2ludG1lbnRcRGVsZXRlQXBwb2ludG1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Projekty/.NET/MedControl/MedControl/Pages/Appointment/EditAppointment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXBwb2ludG1lbnRcRWRpdEFwcG9pbnRtZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Projekty/.NET/MedControl/MedControl/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
