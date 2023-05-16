@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9r0Gx6y5+I1OT1B1L+w0W47jFtmtgx9PlrDKvZ7xMqo=",
+  "Hash": "7U+l52abyC0p9HHKrTiGaZkTGI3DIaBBfk5+qke6rS4=",
   "Source": "MedControl",
   "BasePath": "_content/MedControl",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Projekty\\.NET\\MedControl\\MedControl\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MedControl.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Projekty\\.NET\\MedControl\\MedControl\\wwwroot\\css\\bootswatch_cyborg.css",
+      "SourceId": "MedControl",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Projekty\\.NET\\MedControl\\MedControl\\wwwroot\\",
+      "BasePath": "_content/MedControl",
+      "RelativePath": "css/bootswatch_cyborg.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootswatch_cyborg.css"
     },
     {
       "Identity": "D:\\Projekty\\.NET\\MedControl\\MedControl\\wwwroot\\css\\site.css",

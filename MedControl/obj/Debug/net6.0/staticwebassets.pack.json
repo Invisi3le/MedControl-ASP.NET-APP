@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\MedControl.bundle.scp.css"
     },
     {
+      "Id": "D:\\Projekty\\.NET\\MedControl\\MedControl\\wwwroot\\css\\bootswatch_cyborg.css",
+      "PackagePath": "staticwebassets\\css\\bootswatch_cyborg.css"
+    },
+    {
       "Id": "D:\\Projekty\\.NET\\MedControl\\MedControl\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
