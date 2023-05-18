@@ -3,28 +3,26 @@
 @{
 }
 
-
-
 <form method="post">
-	<input hidden asp-for="Appointment.Id" />
-	<input hidden asp-for="Appointment.Description" />
-	<input hidden asp-for="Appointment.Prescription" />
-	<input hidden asp-for="Appointment.Specialization" />
+	<input hidden asp-for="AppointmentId" />
 	<div class="border p-3 mt-4">
 		<div class="row pb-2">
-			<h2 class="text-primary pl-3">Usuń Wizytę</h2>
+			<h2 class="text-primary pl-3">Czy jesteś pewny usunięcia tej wizyty?</h2>
             <hr />
 		</div>
-		<div class="mb-3">
-			<label asp-for="Appointment.DoctorName"></label>
+		@*<div class="mb-3">
+			<label>Dane lekarza:</label>
 			<input asp-for="Appointment.DoctorName" disabled class="form-control" />
 		</div>
 		<div class="mb-3">
-			<label asp-for="Appointment.Data"></label>
+			<label>Data Wizyty:</label>
 			<input asp-for="Appointment.Data" disabled class="form-control" />
-		</div>
+		</div>*@
 		<button type="submit" class="btn btn-danger" style="width:150px;">Usuń</button>
 		<a asp-page="AppointmentsList" class="btn btn-secondary"  style="width:150px;"> Wróć do listy</a>
 	</div>
 	
 </form>
+
+
+

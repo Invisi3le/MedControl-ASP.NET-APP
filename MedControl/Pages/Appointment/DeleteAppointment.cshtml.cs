@@ -9,30 +9,46 @@ namespace MedControl.Pages.Appointment
     {
         private readonly ApplicationDbContext _db;
         
-        public AppointmentModel Appointment { get; set; }
+     //   public AppointmentModel Appointment { get; set; }
 
         public DeleteAppointmentModel(ApplicationDbContext db)
         {
             _db = db;
         }
-        public void OnGet(int id)
+
+        [BindProperty]
+        public int AppointmentId { get; set; }
+       
+
+        public AppointmentModel Appointment { get; set; }
+
+
+        public async Task<IActionResult> OnGet(int id)
         {
-            Appointment = _db.Appointments.Find(id);
+            AppointmentId = id;
+            var appointment = await _db.Appointments.FindAsync(id);
+            if (appointment == null)
+            {
+                return NotFound();
+            }
+
+            return Page();
         }
 
         public async Task<IActionResult> OnPost()
         {
-            var appointmentFromDb = _db.Appointments.Find(Appointment.Id);
-            if (appointmentFromDb != null)
+            var appointment = await _db.Appointments.FindAsync(AppointmentId);
+            if (appointment == null)
             {
-                _db.Appointments.Remove(appointmentFromDb);
-                await _db.SaveChangesAsync();
-                TempData["success"] = "Appointment deleted successfully";
-                return RedirectToPage("AppointmentsList");
+                return NotFound();
             }
 
+            _db.Appointments.Remove(appointment);
+            await _db.SaveChangesAsync();
+            TempData["success"] = "Appointment deleted successfully";
 
-            return Page();
+            return RedirectToPage("AppointmentsList");
         }
     }
 }
+
