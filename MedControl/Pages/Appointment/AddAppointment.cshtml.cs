@@ -5,11 +5,12 @@ using MedControl.Data;
 
 namespace MedControl.Pages.Appointment
 {
+    [BindProperties]
     public class AddAppintmentModel : PageModel
     {
        private readonly ApplicationDbContext _db;
         public AppointmentModel Appointment { get; set; }
-
+        
         public AddAppintmentModel(ApplicationDbContext db)
         {
             _db = db;
@@ -20,10 +21,11 @@ namespace MedControl.Pages.Appointment
         {
         }
             
-        public async Task <IActionResult> OnPost(AppointmentModel appointment) { 
+        public async Task <IActionResult> OnPost() { 
             
-            await _db.Appointments.AddAsync(appointment);
+            await _db.Appointments.AddAsync(Appointment);
             await _db.SaveChangesAsync();
+            TempData["success"] = "Wizyta zosta³a dodana";
             return RedirectToPage("AppointmentsList");
             
         }

@@ -1,4 +1,35 @@
 ﻿@page
-@model MedControl.Pages.Appointment.EditAppointmentModel
+@model MedControl.Pages.Appointment.EditAppointmentModel;
 @{
 }
+<h2>Edytuj Wizytę</h2>
+
+<form method="post" class="mx-auto mt-5 mb-5 px-5 pt-5 rounded-5 pb-5 bg-light colr-4">
+    <input hidden asp-for="Appointment.Id" />
+    <div class="form-group">
+        <label for="doctorName">Lekarz:</label>
+        <input type="text" class="form-control" asp-for="Appointment.DoctorName">
+    </div>
+
+    <div class="form-group">
+        <label for="date">Data:</label>
+        <input type="date" class="form-control" asp-for="Appointment.Data">
+    </div>
+
+    <div class="form-group">
+        <label for="specialization">Specjalizacja:</label>
+        <input type="text" class="form-control" asp-for="Appointment.Specialization">
+    </div>
+
+    <div class="form-group">
+        <label for="prescription">Recepta:</label>
+        <textarea class="form-control" asp-for="Appointment.Prescription"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="description">Przebieg wizyty:</label>
+        <textarea class="form-control" asp-for="Appointment.Description"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Zatwierdź zmiany</button>
+</form>
